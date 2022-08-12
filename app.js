@@ -24,6 +24,7 @@ const showCards = data => {
     data.forEach(producto=>{
         templateCard.querySelector('h5').textContent = producto.title
         templateCard.querySelector('p').textContent = producto.precio
+        templateCard.querySelector('img').setAttribute("src", producto.thumbnailUrl)
         //Copia todos los elementos hijos del componente templateCard
         const clone = templateCard.cloneNode(true)
         //Añade un elemento hijo
